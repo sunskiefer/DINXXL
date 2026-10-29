@@ -1,0 +1,250 @@
+#include <Arduino.h>
+
+#ifndef TRUE
+	#define TRUE 1
+#endif
+
+
+#ifndef FALSE
+	#define FALSE 0
+#endif
+
+
+#ifndef NULL
+	#define NULL 0
+#endif
+
+
+
+
+	// General OPL2 definitions.
+	#define OPL2_NUM_CHANNELS 9
+
+	// Operator definitions.
+	#define OPERATOR1 0
+	#define OPERATOR2 1
+	#define MODULATOR 0
+	#define CARRIER   1
+
+	// Synthesis type definitions.
+	#define FREQ_MODULATION false
+	#define ADDITIVE_SYNTH  true
+
+	// Drum sounds.
+	#define DRUM_BASS   0x10
+	#define DRUM_SNARE  0x08
+	#define DRUM_TOM    0x04
+	#define DRUM_CYMBAL 0x02
+	#define DRUM_HI_HAT 0x01
+
+
+
+	// Note to frequency mapping.
+	#define NOTE_C   0
+	#define NOTE_CS  1
+	#define NOTE_D   2
+	#define NOTE_DS  3
+	#define NOTE_E   4
+	#define NOTE_F   5
+	#define NOTE_FS  6
+	#define NOTE_G   7
+	#define NOTE_GS  8
+	#define NOTE_A   9
+	#define NOTE_AS 10
+	#define NOTE_B  11
+
+	// Instrument data sources (Arduino only).
+	#if BOARD_TYPE == OPL2_BOARD_TYPE_ARDUINO
+		#define INSTRUMENT_DATA_PROGMEM true
+		#define INSTRUMENT_DATA_SRAM false
+	#endif
+
+	// Instrument type definitions.
+	#define INSTRUMENT_TYPE_MELODIC  0
+	#define INSTRUMENT_TYPE_BASS     6
+	#define INSTRUMENT_TYPE_SNARE    7
+	#define INSTRUMENT_TYPE_TOM      8
+	#define INSTRUMENT_TYPE_CYMBAL   9
+	#define INSTRUMENT_TYPE_HI_HAT  10
+
+	#if BOARD_TYPE == OPL2_BOARD_TYPE_ARDUINO
+		#include <Arduino.h>
+	#else
+		#include <stdint.h>
+		typedef uint8_t byte;
+		#define min(a, b) ((a) < (b) ? (a) : (b))
+		#define max(a, b) ((a) > (b) ? (a) : (b))
+		#define PROGMEM
+	#endif
+
+
+	struct Operator {
+		bool hasTremolo;
+		bool hasVibrato;
+		bool hasSustain;
+		bool hasEnvelopeScaling;
+		byte frequencyMultiplier;
+		byte keyScaleLevel;
+		byte outputLevel;
+		byte attack;
+		byte decay;
+		byte sustain;
+		byte release;
+		byte waveForm;
+	};
+
+
+	struct Instrument {
+		Operator operators[2];
+		byte feedback;
+		bool isAdditiveSynth;
+		byte type;
+	};
+
+
+	class OPL2 {
+		public:
+			OPL2();
+			OPL2(byte reset, byte address, byte latch);
+			void init();
+			void reset();
+               void setCS(byte data);
+			void write(uint8_t reg, uint8_t data);
+			void writeHigh(uint8_t reg, uint8_t data);
+
+			void set4Op(byte data);
+
+			byte getRegisterOffset(byte channel, byte operatorNum);
+
+			byte getFrequencyBlock(float frequency);
+			short getFrequencyFNumber(byte channel, float frequency);
+			short getNoteFNumber(byte note);
+			float getFrequencyStep(byte channel);
+
+			Instrument createInstrument();
+			#if BOARD_TYPE == OPL2_BOARD_TYPE_ARDUINO
+				Instrument loadInstrument(const unsigned char *instrument, bool fromProgmem = INSTRUMENT_DATA_PROGMEM);
+			#else
+				Instrument loadInstrument(const unsigned char *instrument);
+			#endif
+			Instrument getInstrument(byte channel);
+			Instrument getDrumInstrument(byte drumType);
+			void setInstrument(byte channel, Instrument instrument, float volume = 1.0);
+			void setDrumInstrument(Instrument instrument, float volume = 1.0);
+			void setInstrument(byte channel, const unsigned char *instrument);
+
+      void freeze(boolean data);
+      void setCrazy(boolean data);
+
+			byte getRegister(byte reg);byte getRegister2(byte reg);
+			bool getWaveFormSelect();
+			bool getTremolo(byte channel, byte operatorNum);
+			bool getVibrato(byte channel, byte operatorNum);
+			bool getMaintainSustain(byte channel, byte operatorNum);
+			bool getEnvelopeScaling(byte channel, byte operatorNum);
+			byte getMultiplier(byte channel, byte operatorNum);
+			byte getScalingLevel(byte channel, byte operatorNum);
+			byte getVolume(byte channel, byte operatorNum);
+			byte getAttack(byte channel, byte operatorNum);
+			byte getDecay(byte channel, byte operatorNum);
+			byte getSustain(byte channel, byte operatorNum);
+			byte getRelease(byte channel, byte operatorNum);
+			short getFNumber(byte channel);
+			float getFrequency(byte channel);
+			byte getBlock(byte channel);
+			bool getKeyOn(byte channel);
+			byte getFeedback(byte channel);
+			bool getSynthMode(byte channel);
+			bool getDeepTremolo();
+			bool getDeepVibrato();
+			bool getPercussion();
+			byte getDrums();
+			byte getWaveForm(byte channel, byte operatorNum);
+
+			void playNote(byte channel, byte octave, byte note,bool on);
+
+
+			void playDrum(byte drum, byte octave, byte note);
+			byte setRegister(byte reg, byte value);byte setRegister2(byte reg, byte value);
+			byte setWaveFormSelect(bool enable);
+			byte setTremolo(byte channel, byte operatorNum, bool enable);
+			byte setVibrato(byte channel, byte operatorNum, bool enable);
+			byte setMaintainSustain(byte channel, byte operatorNum, bool enable);
+			byte setEnvelopeScaling(byte channel, byte operatorNum, bool enable);
+			byte setMultiplier(byte channel, byte operatorNum, byte multiplier);
+			byte setScalingLevel(byte channel, byte operatorNum, byte scaling);
+			byte setVolume(byte channel, byte operatorNum, int volume);
+			byte setAttack(byte channel, byte operatorNum, int attack);
+			byte setDecay(byte channel, byte operatorNum, int decay);
+			byte setSustain(byte channel, byte operatorNum, int sustain);
+			byte setRelease(byte channel, byte operatorNum, int release);
+			byte setFNumber(byte channel, short fNumber);
+			byte setFrequency(byte channel, float frequency);
+			byte setBlock(byte channel, byte block);
+			byte setKeyOn(byte channel, bool keyOn);
+			byte setFeedback(byte channel, int feedback);
+			byte setOutput(byte channel, byte data);
+			byte setCnt(byte channel, byte data);
+			byte setSynthMode(byte channel, bool isAdditive);
+			byte setDeepTremolo(bool enable);
+			byte setDeepVibrato(bool enable);
+			byte setPercussion(bool enable);
+
+
+			byte setDrums(bool bass, bool snare, bool tom, bool cymbal, bool hihat);
+			byte setWaveForm(byte channel, byte operatorNum, int waveForm);
+
+
+		private:
+
+boolean frz;
+boolean crayCray;
+
+int lastSentData[255];
+
+			const float fIntervals[8] = {
+				0.048, 0.095, 0.190, 0.379, 0.759, 1.517, 3.034, 6.069
+			};
+			const unsigned int noteFNumbers[12] = {
+				0x156, 0x16B, 0x181, 0x198, 0x1B0, 0x1CA,
+				0x1E5, 0x202, 0x220, 0x241, 0x263, 0x287
+			};
+			const float blockFrequencies[8] = {
+				 48.503,   97.006,  194.013,  388.026,
+				776.053, 1552.107, 3104.215, 6208.431
+			};
+			const byte registerOffsets[2][9] = {
+				{ 0x00, 0x01, 0x02, 0x08, 0x09, 0x0A, 0x10, 0x11, 0x12 } ,   /*  initializers for operator 1 */
+				{ 0x03, 0x04, 0x05, 0x0B, 0x0C, 0x0D, 0x13, 0x14, 0x15 }     /*  initializers for operator 2 */
+			};
+			const byte drumRegisterOffsets[2][5] = {
+				{ 0x10, 0xFF, 0x12, 0xFF, 0x11 },
+				{ 0x13, 0x14, 0xFF, 0x15, 0xFF }
+			};
+			const byte drumOffsets[6] = {
+				0x10, 0x13, 0x14, 0x12, 0x15, 0x11
+			};
+			const byte drumChannels[5] = {
+				6, 7, 8, 8, 7
+			};
+			const byte drumBits[5] = {
+				0x10, 0x08, 0x04, 0x02, 0x01
+			};
+			const byte instrumentBaseRegs[6] = {
+				0x20, 0x40, 0x60, 0x80, 0xE0, 0xC0
+			};
+			byte oplRegisters[1024];
+byte oplRegisters2[1024];
+        byte cs=0;
+
+int bendy;
+			const byte ZERO = 0;
+			const byte ONE = 1;
+			const byte CHANNEL_MAX = 8;
+			const byte OCTAVE_MAX = 7;
+			const byte NOTE_MAX = 11;
+			const short F_NUM_MIN = 0;
+			const short F_NUM_MAX = 1023;
+			const float VOLUME_MIN = 0.0;
+			const float VOLUME_MAX = 1.0;
+	};

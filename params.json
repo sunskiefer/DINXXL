@@ -1,0 +1,1223 @@
+{
+ "name": "DINXXL",
+ "params": [
+  {
+   "key": "bdc_vol",
+   "name": "BD Carrier Vol",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 120.0,
+   "display": "int"
+  },
+  {
+   "key": "bdc_wav",
+   "name": "BD Carrier Wav",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "bdc_fbk",
+   "name": "BD Carrier Fbk",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "bdc_mult",
+   "name": "BD Carrier Mult",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 20.0,
+   "display": "int"
+  },
+  {
+   "key": "bdc_tune",
+   "name": "BD Carrier Tune",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 64.0,
+   "display": "int"
+  },
+  {
+   "key": "bdc_fall",
+   "name": "BD Carrier Fall",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 40.0,
+   "display": "int"
+  },
+  {
+   "key": "bdc_att",
+   "name": "BD Carrier Att",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "bdc_dec",
+   "name": "BD Carrier Dec",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 70.0,
+   "display": "int"
+  },
+  {
+   "key": "bdm_vol",
+   "name": "BD Mod Vol",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 120.0,
+   "display": "int"
+  },
+  {
+   "key": "bdm_wav",
+   "name": "BD Mod Wav",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "bdm_mult",
+   "name": "BD Mod Mult",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 20.0,
+   "display": "int"
+  },
+  {
+   "key": "bdm_fall",
+   "name": "BD Mod Fall",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 40.0,
+   "display": "int"
+  },
+  {
+   "key": "bdm_att",
+   "name": "BD Mod Att",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "bdm_dec",
+   "name": "BD Mod Dec",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 70.0,
+   "display": "int"
+  },
+  {
+   "key": "sn_vol",
+   "name": "Snare Vol",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 120.0,
+   "display": "int"
+  },
+  {
+   "key": "sn_wav",
+   "name": "Snare Wav",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "sn_mult",
+   "name": "Snare Mult",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 20.0,
+   "display": "int"
+  },
+  {
+   "key": "sn_tune",
+   "name": "Snare Tune",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 64.0,
+   "display": "int"
+  },
+  {
+   "key": "sn_fall",
+   "name": "Snare Fall",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 40.0,
+   "display": "int"
+  },
+  {
+   "key": "sn_att",
+   "name": "Snare Att",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "sn_dec",
+   "name": "Snare Dec",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 70.0,
+   "display": "int"
+  },
+  {
+   "key": "htc_vol",
+   "name": "Hats Tom Cymb Vol",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 120.0,
+   "display": "int"
+  },
+  {
+   "key": "htc_wav",
+   "name": "Hats Tom Cymb Wav",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "htc_mult",
+   "name": "Hats Tom Cymb Mult",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 20.0,
+   "display": "int"
+  },
+  {
+   "key": "htc_tune",
+   "name": "Hats Tom Cymb Tune",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 64.0,
+   "display": "int"
+  },
+  {
+   "key": "htc_fall",
+   "name": "Hats Tom Cymb Fall",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 40.0,
+   "display": "int"
+  },
+  {
+   "key": "htc_att",
+   "name": "Hats Tom Cymb Att",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "htc_dec",
+   "name": "Hats Tom Cymb Dec",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 70.0,
+   "display": "int"
+  },
+  {
+   "key": "op1_vol",
+   "name": "Op1 Vol",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 120.0,
+   "display": "int"
+  },
+  {
+   "key": "op1_wav",
+   "name": "Op1 Wav",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op1_fbk",
+   "name": "Op1 Fbk",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op1_algo",
+   "name": "Op1 Algo",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op1_mult",
+   "name": "Op1 Mult",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 20.0,
+   "display": "int"
+  },
+  {
+   "key": "op1_att",
+   "name": "Op1 Att",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op1_dec",
+   "name": "Op1 Dec",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 70.0,
+   "display": "int"
+  },
+  {
+   "key": "op2_vol",
+   "name": "Op2 Vol",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 120.0,
+   "display": "int"
+  },
+  {
+   "key": "op2_wav",
+   "name": "Op2 Wav",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op2_mult",
+   "name": "Op2 Mult",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 20.0,
+   "display": "int"
+  },
+  {
+   "key": "op2_trem",
+   "name": "Op2 Trem",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op2_vibra",
+   "name": "Op2 Vibra",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op2_att",
+   "name": "Op2 Att",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op2_dec",
+   "name": "Op2 Dec",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 70.0,
+   "display": "int"
+  },
+  {
+   "key": "op3_vol",
+   "name": "Op3 Vol",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 120.0,
+   "display": "int"
+  },
+  {
+   "key": "op3_wav",
+   "name": "Op3 Wav",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op3_fbk",
+   "name": "Op3 Fbk",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op3_tune",
+   "name": "Op3 Tune",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 64.0,
+   "display": "int"
+  },
+  {
+   "key": "op3_mult",
+   "name": "Op3 Mult",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 20.0,
+   "display": "int"
+  },
+  {
+   "key": "op3_att",
+   "name": "Op3 Att",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op3_dec",
+   "name": "Op3 Dec",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 70.0,
+   "display": "int"
+  },
+  {
+   "key": "op4_vol",
+   "name": "Op4 Vol",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 120.0,
+   "display": "int"
+  },
+  {
+   "key": "op4_wav",
+   "name": "Op4 Wav",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op4_mult",
+   "name": "Op4 Mult",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 20.0,
+   "display": "int"
+  },
+  {
+   "key": "op4_trem",
+   "name": "Op4 Trem",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op4_vibra",
+   "name": "Op4 Vibra",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op4_att",
+   "name": "Op4 Att",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 0.0,
+   "display": "int"
+  },
+  {
+   "key": "op4_dec",
+   "name": "Op4 Dec",
+   "min": 0.0,
+   "max": 127.0,
+   "default": 70.0,
+   "display": "int"
+  },
+  {
+   "key": "kv_bd",
+   "name": "Key BD",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "kv_sd",
+   "name": "Key SD",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "kv_tom",
+   "name": "Key TOM",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "kv_ch",
+   "name": "Key CH",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "kv_oh",
+   "name": "Key OH",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "kv_cym",
+   "name": "Key CYM",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "kv_s1",
+   "name": "Key SYNTH 1",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "kv_s2",
+   "name": "Key SYNTH 2",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "kv_s3",
+   "name": "Key SYNTH 3",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "kv_s4",
+   "name": "Key SYNTH 4",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_1",
+   "name": "Key 1 Save",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_2",
+   "name": "Key 2 Length",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_3",
+   "name": "Key 3 Clear",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_4",
+   "name": "Key 4 Wiggle",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_5",
+   "name": "Key 5 Swing",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_6",
+   "name": "Key 6 Mute",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_7",
+   "name": "Key 7 Solo",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_8",
+   "name": "Key 8 Prob",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_9",
+   "name": "Key 9 Stutter",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_10",
+   "name": "Key 10 Bend",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_11",
+   "name": "Key 11 Freeze",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_12",
+   "name": "Key 12 Trem",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_13",
+   "name": "Key 13 Vibr",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_14",
+   "name": "Key 14 Phones",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_15",
+   "name": "Key 15 Mix",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "ks_16",
+   "name": "Key 16 Route",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "km_kit",
+   "name": "Key Kit/Patt",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "km_step",
+   "name": "Key Step",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "km_func",
+   "name": "Key Function",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "km_tempo",
+   "name": "Key Tempo",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "km_rec",
+   "name": "Key Rec",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "k_run",
+   "name": "Key Run",
+   "min": 0.0,
+   "max": 1.0,
+   "default": 0.0,
+   "momentary": true,
+   "type": "trigger"
+  },
+  {
+   "key": "lv_bd",
+   "name": "Lamp BD",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lv_sd",
+   "name": "Lamp SD",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lv_tom",
+   "name": "Lamp TOM",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lv_ch",
+   "name": "Lamp CH",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lv_oh",
+   "name": "Lamp OH",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lv_cym",
+   "name": "Lamp CYM",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lv_s1",
+   "name": "Lamp SYNTH 1",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lv_s2",
+   "name": "Lamp SYNTH 2",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lv_s3",
+   "name": "Lamp SYNTH 3",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lv_s4",
+   "name": "Lamp SYNTH 4",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_1",
+   "name": "Lamp Step 1",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_2",
+   "name": "Lamp Step 2",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_3",
+   "name": "Lamp Step 3",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_4",
+   "name": "Lamp Step 4",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_5",
+   "name": "Lamp Step 5",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_6",
+   "name": "Lamp Step 6",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_7",
+   "name": "Lamp Step 7",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_8",
+   "name": "Lamp Step 8",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_9",
+   "name": "Lamp Step 9",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_10",
+   "name": "Lamp Step 10",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_11",
+   "name": "Lamp Step 11",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_12",
+   "name": "Lamp Step 12",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_13",
+   "name": "Lamp Step 13",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_14",
+   "name": "Lamp Step 14",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_15",
+   "name": "Lamp Step 15",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "ls_16",
+   "name": "Lamp Step 16",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lm_kit",
+   "name": "Lamp Kit",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lm_step",
+   "name": "Lamp Step",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lm_func",
+   "name": "Lamp Func",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lm_run",
+   "name": "Lamp Run",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lm_tempo",
+   "name": "Lamp Tempo",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "lm_rec",
+   "name": "Lamp Rec",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "scr_t1",
+   "name": "Screen Text 1",
+   "min": 0.0,
+   "max": 0.0,
+   "default": 0.0,
+   "display": "string"
+  },
+  {
+   "key": "scr_t2",
+   "name": "Screen Text 2",
+   "min": 0.0,
+   "max": 0.0,
+   "default": 0.0,
+   "display": "string"
+  },
+  {
+   "key": "scr_t3",
+   "name": "Screen Text 3",
+   "min": 0.0,
+   "max": 0.0,
+   "default": 0.0,
+   "display": "string"
+  },
+  {
+   "key": "scr_t4",
+   "name": "Screen Text 4",
+   "min": 0.0,
+   "max": 0.0,
+   "default": 0.0,
+   "display": "string"
+  },
+  {
+   "key": "scr_t5",
+   "name": "Screen Text 5",
+   "min": 0.0,
+   "max": 0.0,
+   "default": 0.0,
+   "display": "string"
+  },
+  {
+   "key": "scr_wave",
+   "name": "Screen Wave",
+   "options": [
+    "",
+    "Sine",
+    "Half Sine",
+    "Abs Sine",
+    "Pulse Sine",
+    "Sine Even",
+    "Abs Even",
+    "Square",
+    "Derived Square"
+   ],
+   "default": 0
+  },
+  {
+   "key": "scr_algo",
+   "name": "Screen Algo",
+   "options": [
+    "",
+    "Algo 1",
+    "Algo 2",
+    "Algo 3",
+    "Algo 4",
+    "Algo 5"
+   ],
+   "default": 0
+  },
+  {
+   "key": "k_hold",
+   "name": "Key Hold",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "pad_mode",
+   "name": "Pads",
+   "options": [
+    "PADS = VOICES",
+    "CHROMATIC"
+   ],
+   "default": 0
+  }
+ ],
+ "sections": [
+  {
+   "label": "DRUMS",
+   "keys": [
+    "bdc_vol",
+    "bdc_wav",
+    "bdc_fbk",
+    "bdc_mult",
+    "bdc_tune",
+    "bdc_fall",
+    "bdc_att",
+    "bdc_dec",
+    "bdm_vol",
+    "bdm_wav",
+    "bdm_mult",
+    "bdm_fall",
+    "bdm_att",
+    "bdm_dec",
+    "sn_vol",
+    "sn_wav",
+    "sn_mult",
+    "sn_tune",
+    "sn_fall",
+    "sn_att",
+    "sn_dec",
+    "htc_vol",
+    "htc_wav",
+    "htc_mult",
+    "htc_tune",
+    "htc_fall",
+    "htc_att",
+    "htc_dec"
+   ]
+  },
+  {
+   "label": "SYNTH",
+   "keys": [
+    "op1_vol",
+    "op1_wav",
+    "op1_fbk",
+    "op1_algo",
+    "op1_mult",
+    "op1_att",
+    "op1_dec",
+    "op2_vol",
+    "op2_wav",
+    "op2_mult",
+    "op2_trem",
+    "op2_vibra",
+    "op2_att",
+    "op2_dec",
+    "op3_vol",
+    "op3_wav",
+    "op3_fbk",
+    "op3_tune",
+    "op3_mult",
+    "op3_att",
+    "op3_dec",
+    "op4_vol",
+    "op4_wav",
+    "op4_mult",
+    "op4_trem",
+    "op4_vibra",
+    "op4_att",
+    "op4_dec"
+   ]
+  },
+  {
+   "label": "KEYS",
+   "keys": [
+    "kv_bd",
+    "kv_sd",
+    "kv_tom",
+    "kv_ch",
+    "kv_oh",
+    "kv_cym",
+    "kv_s1",
+    "kv_s2",
+    "kv_s3",
+    "kv_s4",
+    "ks_1",
+    "ks_2",
+    "ks_3",
+    "ks_4",
+    "ks_5",
+    "ks_6",
+    "ks_7",
+    "ks_8",
+    "ks_9",
+    "ks_10",
+    "ks_11",
+    "ks_12",
+    "ks_13",
+    "ks_14",
+    "ks_15",
+    "ks_16",
+    "km_kit",
+    "km_step",
+    "km_func",
+    "km_tempo",
+    "km_rec",
+    "k_run",
+    "k_hold",
+    "pad_mode"
+   ]
+  }
+ ]
+}

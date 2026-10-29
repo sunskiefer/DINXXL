@@ -1,0 +1,14 @@
+DINXXL
+Copyright (C) 2026 L'Cronx (github.com/sunskiefer). Licensed GPL-3.0-or-later (see LICENSE).
+Code: the board model (src/hw.*, src/shim/), the machine glue (src/machine.*, src/fw_unit*.cpp), the plugin
+(src/engine.cc), the tools and the panel art composition.
+
+Contains, unmodified and with its own notices:
+- BlastBeats firmware v7.1 (commit 9b562d0f8675a5171e94428a9e1ec13540392a9d), (c) Twisted Electrons,
+  https://github.com/twistedelectrons/BlastBeats - src/fw/ and card/factory.bin (the BlastBeats factory card).
+  Not made or endorsed by Twisted Electrons. No licence is declared upstream; see README.
+- ymfm (YMF262 emulation), (c) Aaron Giles, BSD-3-Clause - src/dsp/.
+- Arduino OPL2 library (Maarten Janssen, MIT), uClock (Romulo Silva, MIT), miniz (MIT) - src/fw/.
+- Chakra Petch (Cadson Demak), SIL Open Font License 1.1 - art/fonts/OFL.txt.
+- Titillium Web SemiBold, SIL Open Font License 1.1 - art/fonts/.
+The key, fader and lamp pictures are generic parts (keys sold anywhere); no Twisted Electrons artwork or logo is used.
